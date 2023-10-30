@@ -3,6 +3,7 @@ import styles from "./Page404.module.css";
 import Container from "react-bootstrap/Container";
 
 function Page404() {
+
   return (
     <div
       className={`${styles.page404} bg-primary text-white d-flex flex-column justify-content-center align-items-center`}

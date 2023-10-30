@@ -1,12 +1,18 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function Header() {
   const [isDisplayed, setIsDisplayed] = useState(false);
 
+  const [favorites, setFavorites, removeFavorites] = useLocalStorage("favorites", "salut");
+
   function handleMenuClick() {
     setIsDisplayed((prevIsDisplayed) => !prevIsDisplayed);
+    setFavorites("pa");
+    console.log(favorites);
   }
 
   let dropdownMenuClasses = styles.dropdownMenu;
@@ -18,12 +24,14 @@ function Header() {
     <header>
       <nav className={`${styles.nav} bg-primary w-100`}>
         <Container className="d-flex justify-content-between align-items-center">
-          <a href="index.html" className="p-3">
-            <img
-              src="https://itschool.ro/images/logo-itschool-dark.svg"
-              alt="itschool logo"
-            />
-          </a>
+          <Link to = {"/"}>
+            <div className="p-3">
+              <img
+                src="https://itschool.ro/images/logo-itschool-dark.svg"
+                alt="itschool logo"
+              />
+          </div>
+          </Link>
           <div className={styles.menuIconContainer}>
             <span
               onClick={handleMenuClick}
@@ -34,28 +42,40 @@ function Header() {
             </span>
             <ul className={dropdownMenuClasses}>
               <li className={isDisplayed ? "container" : null}>
-                <a
-                  href="pages/courses.html"
-                  className="p-3 text-uppercase text-light"
-                >
-                  Tech
-                </a>
+                <Link to = {"/tech"}>
+                  <div
+                    className="p-3 text-uppercase text-light"
+                  >
+                    Tech
+                  </div>
+                </Link>
               </li>
               <li className={isDisplayed ? "container" : null}>
-                <a
-                  href="pages/about.html"
-                  className="p-3 text-uppercase text-light"
-                >
-                  Fotbal
-                </a>
+                <Link to = {"/football"}>
+                  <div
+                    className="p-3 text-uppercase text-light"
+                  >
+                    Fotbal
+                  </div>
+                </Link>
               </li>
               <li className={isDisplayed ? "container" : null}>
-                <a
-                  href="pages/contact.html"
-                  className="p-3 text-uppercase text-light"
-                >
-                  Favorite
-                </a>
+                <Link to = {"/fashion"}>
+                  <div
+                    className="p-3 text-uppercase text-light"
+                  >
+                    Fashion
+                  </div>
+                </Link>
+              </li>
+              <li className={isDisplayed ? "container" : null}>
+                <Link to = {"/favorite"}>
+                  <div
+                    className="p-3 text-uppercase text-light"
+                  >
+                    Favorite
+                  </div>
+                </Link>
               </li>
             </ul>
           </div>
