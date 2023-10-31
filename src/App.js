@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import useLocalStorage from "./hooks/useLocalStorage";
+import MainPage from "./pages/MainPage";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
         <Header />
         <Routes>
-          <Route path = "/"/>
+          <Route path = "/" element = {<MainPage/>} />
           <Route path = "*" element = {<Page404 />} />
         </Routes>
         <Footer />
