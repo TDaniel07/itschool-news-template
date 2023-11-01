@@ -1,7 +1,7 @@
 .title{
     justify-content: center;
 }
-.section{
+.newsSection{
     width: 100%;
     justify-content: center;
     display: flex;
@@ -13,4 +13,11 @@
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 40px;
+}
+.cardCol{
+    display: flex;
+    margin-bottom: 20px;
+}
+.cardText{
+    text-align: center;
 }

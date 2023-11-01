@@ -1,0 +1,10 @@
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.activeButton{
+    background-color: var(--bg-primary);
+    border-color: var(--bg-primary);
+    color: white;
+}

@@ -1,0 +1,14 @@
+.mainPageContainer{
+    margin-bottom: 20px;
+}
+.textContainer{
+    display: flex;
+    justify-content: center;
+}
+.newsSectionContainer{
+    margin-bottom: -20px;
+}
+.favoritesSectionContainer{
+    margin-bottom: 40px;
+    margin-top: 50px;
+}

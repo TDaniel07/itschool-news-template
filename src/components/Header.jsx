@@ -1,18 +1,13 @@
 import { useState } from "react";
-import styles from "./Header.module.css";
+import styles from "./css/Header.module.css";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 function Header() {
   const [isDisplayed, setIsDisplayed] = useState(false);
 
-  const [favorites, setFavorites, removeFavorites] = useLocalStorage("favorites", "salut");
-
   function handleMenuClick() {
     setIsDisplayed((prevIsDisplayed) => !prevIsDisplayed);
-    setFavorites("pa");
-    console.log(favorites);
   }
 
   let dropdownMenuClasses = styles.dropdownMenu;
@@ -21,7 +16,7 @@ function Header() {
   }
 
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={`${styles.nav} bg-primary w-100`}>
         <Container className="d-flex justify-content-between align-items-center">
           <Link to = {"/"}>
@@ -42,7 +37,7 @@ function Header() {
             </span>
             <ul className={dropdownMenuClasses}>
               <li className={isDisplayed ? "container" : null}>
-                <Link to = {"/tech"}>
+                <Link to = {"/category/technology"}>
                   <div
                     className="p-3 text-uppercase text-light"
                   >
@@ -51,7 +46,7 @@ function Header() {
                 </Link>
               </li>
               <li className={isDisplayed ? "container" : null}>
-                <Link to = {"/football"}>
+                <Link to = {"/category/football"}>
                   <div
                     className="p-3 text-uppercase text-light"
                   >
@@ -60,7 +55,7 @@ function Header() {
                 </Link>
               </li>
               <li className={isDisplayed ? "container" : null}>
-                <Link to = {"/fashion"}>
+                <Link to = {"/category/fashion"}>
                   <div
                     className="p-3 text-uppercase text-light"
                   >

@@ -29,14 +29,33 @@ ul {
 a {
   display: block;
   text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: black;
 }
 
 /* Customizam Bootstrap: */
-.btn-secondary,
-.btn-secondary:hover,
+.active{
+  background-color: var(--bg-primary)!important;
+  border-color: var(--bg-primary)!important;
+  color: white!important;
+}
+.btn-secondary{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  border: 1px solid #dee2e6;
+  color: black;
+  background-color: white;
+}
+.btn:hover{
+  background-color: #dee2e6;
+  color: black;
+}
 .btn-secondary:focus {
-  background-color: #2bb686;
-  border-color: #2bb686;
+  background-color: var(--bg-primary);
+  border-color: var(--bg-primary);
+  color: white;
 }
 
 .text-primary {

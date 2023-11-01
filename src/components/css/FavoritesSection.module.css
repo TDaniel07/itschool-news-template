@@ -1,0 +1,13 @@
+.favoritesSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favoritesSectionText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favoritesSectionTitle{
+    margin-bottom: 50px;
+}
