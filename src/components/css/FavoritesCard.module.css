@@ -1,0 +1,17 @@
+.favoritesCardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+}
+.favoriteButton{
+    background-color: #2bb686!important;
+    border-color: #2bb686!important;
+}
+.favoriteButton:hover{
+    color: white!important;
+}

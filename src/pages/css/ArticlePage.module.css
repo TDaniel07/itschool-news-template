@@ -1,0 +1,15 @@
+.articleContainer a{
+    color: var(--text-secondary);
+    display: inline;
+}
+.articleContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 15rem!important;
+    padding-left: 15rem!important;
+}
+.articleContainer img{
+    width: 100%;
+    height: auto;
+}
