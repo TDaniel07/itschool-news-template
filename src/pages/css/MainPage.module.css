@@ -12,3 +12,7 @@
     margin-bottom: 40px;
     margin-top: 50px;
 }
+.textContainer a{
+    display: inline;
+    color: #2bb686!important;
+}

@@ -8,8 +8,19 @@
     flex-direction: column;
     padding-right: 15rem!important;
     padding-left: 15rem!important;
+    margin-bottom: 50px;
 }
 .articleContainer img{
     width: 100%;
     height: auto;
+}
+.addToFavoriteAlert{
+    display: flex!important;
+    justify-content: center!important;
+    width: fit-content!important;
+    position: fixed!important;
+    top: 10px!important;
+    left: 50%!important;
+    transform: translateX(-50%)!important;
+    z-index: 1000;
 }

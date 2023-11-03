@@ -64,7 +64,7 @@ function Header() {
                 </Link>
               </li>
               <li className={isDisplayed ? "container" : null}>
-                <Link to = {"/favorite"}>
+                <Link to = {"/favorites"}>
                   <div
                     className="p-3 text-uppercase text-light"
                   >

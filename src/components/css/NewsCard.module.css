@@ -1,0 +1,22 @@
+.cardCol{
+    display: flex;
+    margin-bottom: 20px;
+}
+.cardText{
+    text-align: center;
+}
+.deleteButton{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    width: 40px!important;
+    height: 40px!important;
+    position: absolute!important;
+    top: 10px!important;
+    right: 10px!important;
+    border-radius: 50%!important;
+    z-index: 1000!important;
+}
+.deleteButton:hover{
+    background-color: #f8f9fa!important;
+}

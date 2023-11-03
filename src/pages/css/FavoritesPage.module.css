@@ -1,0 +1,16 @@
+.favoritesContainer{
+    margin-top: 50px;
+    flex: 1 1;
+    margin-bottom: 30px;
+}
+.titleContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.textContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
