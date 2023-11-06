@@ -21,7 +21,7 @@ export default function FavoritesCard({date, authors, apiUrl, thumbnail, webTitl
         <div className={styles.favoritesCardContainer}>
             <div>
                 <p><b>{authors}</b></p>
-                <p><b>{`${date.year}/${date.month}/${date.day}`}</b></p>
+                <p><b>{`${date.day}/${date.month}/${date.year}`}</b></p>
             </div>
             <div>
                 <Button className={styles.favoriteButton} onClick={handleCLick}>

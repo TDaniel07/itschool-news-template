@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Alert, Container } from "react-bootstrap";
+import { Alert, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import getNews from "../endpoints/news";
 import styles from "./css/ArticlePage.module.css"
@@ -30,21 +30,25 @@ export default function ArticlePage(){
     }, [article])
 
     return(
-        <Container className={`${styles.articleContainer} gx-5 fluid`}>
-            {showAlert && <Alert variant="success" className={styles.addToFavoriteAlert}>Succes! Poți vedea știrea accesând secțiunea Favorite.</Alert>}
-            <h1>{articleData.title}</h1>
-            <p className="fw-bold">{articleData.trailText}</p>
-            <div dangerouslySetInnerHTML={{__html: articleData.head}}/>
-            <FavoritesCard 
-            date = {transformDate(articleData.date)} 
-            authors={articleData.authors} 
-            apiUrl={articleData.apiUrl} 
-            thumbnail={articleData.thumbnail} 
-            trailText={articleData.trailText}
-            webTitle={articleData.webTitle}
-            setShowAlert={setShowAlert}
-            />
-            <div dangerouslySetInnerHTML={{__html: articleData.body}}/>
+        <Container className={`${styles.articleContainer}`}>
+            <Row className={styles.articleRow}>
+                <Col lg = {8} className={styles.articleCol}>
+                    {showAlert && <Alert variant="success" className={styles.addToFavoriteAlert}>Succes! Poți vedea știrea accesând secțiunea Favorite.</Alert>}
+                    <h1 className={styles.articleTitle}>{articleData.title}</h1>
+                    <p className="fw-bold">{articleData.trailText}</p>
+                    <div dangerouslySetInnerHTML={{__html: articleData.head}}/>
+                    <FavoritesCard 
+                    date = {transformDate(articleData.date)} 
+                    authors={articleData.authors} 
+                    apiUrl={articleData.apiUrl} 
+                    thumbnail={articleData.thumbnail} 
+                    trailText={articleData.trailText}
+                    webTitle={articleData.webTitle}
+                    setShowAlert={setShowAlert}
+                    />
+                    <div dangerouslySetInnerHTML={{__html: articleData.body}}/>
+                </Col>
+            </Row>
         </Container>
     )
 }

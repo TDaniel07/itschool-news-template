@@ -6,9 +6,11 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    padding-right: 15rem!important;
-    padding-left: 15rem!important;
+    align-items: center;
+    /* padding-right: 15rem!important; */
+    /* padding-left: 15rem!important; */
     margin-bottom: 50px;
+    flex: 1 1;
 }
 .articleContainer img{
     width: 100%;
@@ -22,5 +24,17 @@
     top: 10px!important;
     left: 50%!important;
     transform: translateX(-50%)!important;
-    z-index: 1000;
+    z-index: 100000;
+}
+.articleCol{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.articleRow{
+    display: flex;
+    justify-content: center;
+}
+.articleTitle{
+    margin-bottom: 50px;
 }
